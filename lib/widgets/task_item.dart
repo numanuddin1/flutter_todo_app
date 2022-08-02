@@ -24,7 +24,7 @@ class _TaskCheckBoxState extends State<TaskCheckBox> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-      value: isChecked, noman uddin 
+      value: isChecked,
       splashRadius: 40,
       onChanged: (newValue) {
         setState(() {
