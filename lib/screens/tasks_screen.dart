@@ -64,8 +64,9 @@ class _TasksScreenState extends State<TasksScreen> {
         onPressed: () {
           showModalBottomSheet(context: context, builder: (context) => AddTaskScreen());
         },
-        child: Icon(Icons.add),
+       child: Icon(Icons.add),
         backgroundColor: Colors.lightBlueAccent,
+
       ),
     );
   }
