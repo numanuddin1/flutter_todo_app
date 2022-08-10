@@ -42,7 +42,7 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
                 Text(
                   '08 Tasks',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Colors.white,),
                 ),
               ],
             ),

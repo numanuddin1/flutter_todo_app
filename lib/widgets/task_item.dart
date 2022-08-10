@@ -14,13 +14,11 @@ class TaskItem extends StatelessWidget {
   }
 }
 
-
-
 class TaskCheckBox extends StatefulWidget {
-
   @override
   State<TaskCheckBox> createState() => _TaskCheckBoxState();
 }
+
 class _TaskCheckBoxState extends State<TaskCheckBox> {
   bool isChecked = false;
 
