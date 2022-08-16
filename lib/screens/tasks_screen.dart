@@ -1,18 +1,14 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_todo_app/models/task_data.dart';
+import 'package:provider/provider.dart';
 
+import '../models/task.dart';
 import '../widgets/task_list.dart';
 import 'add_task_screen.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  State<TasksScreen> createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
-  Widget buildBottomSheet(BuildContext context) => Container();
-
+class TasksScreen extends StatelessWidget {
 
 
   @override
@@ -41,7 +37,7 @@ class _TasksScreenState extends State<TasksScreen> {
                   height: 6,
                 ),
                 Text(
-                  '08 Tasks',
+                  '${Provider.of<Data>(context).taskCount} Tasks',
                   style: TextStyle(fontSize: 20, color: Colors.white,),
                 ),
               ],
@@ -63,7 +59,12 @@ class _TasksScreenState extends State<TasksScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(context: context, builder: (context) => AddTaskScreen());
+          showModalBottomSheet(context: context, builder: (context) => AddTaskScreen((newTaskTitle){
+           // setState(() {
+           //   Provider.of<Data>(context).tasks.add(Task(name: newTaskTitle));
+           // });
+           Navigator.pop(context);
+          }));
         },
        child: Icon(Icons.add),
         backgroundColor: Colors.lightBlueAccent,
